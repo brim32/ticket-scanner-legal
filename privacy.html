@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy</title>
+<meta name="description" content="Privacy policy for the lottery ticket scanner and ledger app.">
+<style>
+  :root { --bg: #ffffff; --fg: #1d1d1f; --muted: #5f6368; --rule: #e3e3e3; --link: #0b57d0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121212; --fg: #ececec; --muted: #a8a8a8; --rule: #2c2c2c; --link: #8ab4f8; }
+  }
+  html { background: var(--bg); }
+  body { margin: 0 auto; max-width: 42rem; padding: 2rem 1rem 4rem; color: var(--fg); background: var(--bg);
+         font: 1rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  h1 { font-size: 1.75rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+  p, li { margin: .5rem 0; }
+  ul { padding-left: 1.25rem; }
+  .date { color: var(--muted); margin: 0 0 1.5rem; }
+  a { color: var(--link); }
+</style>
+</head>
+<body>
+<h1>Privacy policy</h1>
+<p class="date">Last changed 14 October 2026</p>
+
+<p>This app reads photos of lottery tickets you have already bought, checks them against published results, and keeps a ledger of what you have spent and won. It sells no tickets, takes no bets and is not affiliated with any lottery. There is no account and no login. This policy says what leaves your phone, who receives it, what is kept and for how long, and how to have it removed.</p>
+
+<h2>Your tickets and ledger stay on your phone</h2>
+<p>The tickets you save, what you paid, what you won and every reading you correct are stored in the app on your phone. They are also included in your phone's backups if you have backups turned on. They are not sent to us or to anyone else. Deleting the app deletes them from the phone.</p>
+
+<h2>Reading a ticket: the photo</h2>
+<p>When you scan a ticket, the app sends the photo to its own scan service, which passes it to Anthropic's Claude to read and sends the numbers back. The photo shows the whole ticket, including its barcode and serial number, and anything else in the frame.</p>
+<ul>
+  <li>The scan service does not keep the photo or anything printed on the ticket.</li>
+  <li>The app does not keep the photo either; it keeps only the reading you confirm.</li>
+  <li>Anthropic processes the photo under its commercial terms, which do not allow it to train its models on it. Anthropic's own handling is described in its <a href="https://www.anthropic.com/legal/privacy">privacy policy</a>.</li>
+</ul>
+<p><strong>By scanning a ticket, you agree to its photo being sent to the scan service and to Anthropic for this purpose.</strong> If you do not agree, do not use scanning.</p>
+
+<h2>What the scan service keeps</h2>
+<p>The scan service runs on Supabase, in the United States. To make sure only this app can use it, the app proves it is genuine through Apple's App Attest, which gives your copy of the app a key. The key identifies that copy of the app, not you: the service never learns your name, email, phone number or Apple account.</p>
+<p>For each scan, the service records, under that key: when the scan happened, whether it succeeded, which reading model was used, how much text it produced and how long it took. It uses these records to count the free scans each month and to keep the service within its daily limits. Because they record when scans happen, they can show how often the app is used, and so how often you buy tickets.</p>
+<ul>
+  <li>Scan records are kept for 90 days. After that they are merged into daily totals for all users, with no key, and the individual records are deleted.</li>
+  <li>The app's key is kept for as long as the app is in use, so that the free allowance can be counted. You can ask for it to be deleted (see below).</li>
+  <li>One-time values used to check the app are deleted within an hour.</li>
+</ul>
+
+<h2>Connection logs</h2>
+<p>Supabase, which hosts the scan service, records each connection's internet address and the approximate location it gives, such as city and postal code, and the network operator. Supabase keeps these logs for up to 7 days and processes them only to run the service, under its <a href="https://supabase.com/legal/dpa">data processing agreement</a>.</p>
+
+<h2>Age</h2>
+<p>This app is for adults. As Texas law requires, it asks the App Store for your age range, on your phone, and lets you continue only if you are 18 or older. The age range is used only for that check. It is never sent to the scan service or anyone else, and the app keeps only whether the check passed.</p>
+
+<h2>Downloads that carry nothing about you</h2>
+<p>The app downloads public information. These requests say nothing about you or your tickets.</p>
+<ul>
+  <li>Winning numbers, jackpot figures, prize amounts and scratch-off prizes remaining, from texaslottery.com.</li>
+  <li>For the map of where winning tickets were sold: the state's public record of prizes paid, from data.texas.gov, and the locations of those shops from the US Census Bureau's geocoder, which is sent a shop's street address from that public record.</li>
+  <li>The map is Apple Maps, which loads map images from Apple. If you allow it, the map shows where you are; the app never reads, stores or sends your location.</li>
+</ul>
+
+<h2>What the app does not do</h2>
+<ul>
+  <li>No account, no login, and no request for your name, email or phone number.</li>
+  <li>No advertising, no tracking across other apps or websites, and no analytics on your tickets.</li>
+  <li>No sale of any data.</li>
+  <li>Reminders are scheduled on your phone; nothing is sent to a notification service.</li>
+</ul>
+
+<h2>Who receives data, and why</h2>
+<ul>
+  <li><strong>Supabase</strong> hosts the scan service and its records, and keeps the connection logs above.</li>
+  <li><strong>Anthropic</strong> reads the ticket photo.</li>
+  <li><strong>Apple</strong> provides App Attest, the age range, the map and, when you buy one, the subscription.</li>
+</ul>
+<p>Each processes data only to provide its part of the service, under terms that protect it at least as this policy does.</p>
+
+<h2>Removing your data</h2>
+<ul>
+  <li><strong>On your phone:</strong> delete the app. Your phone's backups keep a copy until those backups are replaced or deleted.</li>
+  <li><strong>On the scan service:</strong> email us and we will delete your app's key and its scan records. Because the records are not tied to who you are, include the date and approximate time of a scan so we can find them.</li>
+</ul>
+
+<h2>Changes</h2>
+<p>If this policy changes, the date above changes, and the app tells you before anything new leaves your phone.</p>
+
+<h2>Contact</h2>
+<p>Privacy questions and requests: <a href="mailto:brim_a_basom@yahoo.com">brim_a_basom@yahoo.com</a>.</p>
+</body>
+</html>
